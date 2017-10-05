@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from config.quickstart.serializers import UserSerializer, GroupSerializer, TestSerializer
+from config.quickstart.serializers import UserSerializer, GroupSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -41,16 +41,13 @@ class TestPrediction(APIView):
 
     def post(self, request, *args, **kw):
         # print(type(request.body.decode("utf-8")))
-        # print(request.data)
-        serializer = TestSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            print(serializer.data)
-        # msg_body = json.loads(request.body.decode("utf-8"))
-        # print("msg_body: {}".format(msg_body))
-        # print(type(msg_body))
-        # ip_id = msg_body['id']
-        # prediction_class = makeprediction.get_feature(ip_id)
-        # print ("Class is : " + str(prediction_class['value']))
+        # print(json.dumps(request.data)) 
+        msg_body = json.loads(json.dumps(request.data))
+        # print(type(json.loads(msg_body)))
+        print("msg_body: {}".format(msg_body))
+        print(type(msg_body))
+        ip_id = msg_body['id']
+        prediction_class = makeprediction.get_feature(ip_id)
+        print ("Class is : " + str(prediction_class['value']))
         response = Response("POST", status=status.HTTP_200_OK)
         return response

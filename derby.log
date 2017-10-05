@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed Oct 04 18:21:26 UTC 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015e-e89e-fa9f-00000b3926d8 
-on database directory /home/thanathip/platform/django-test-service/modern-django-/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@463de70f 
+Thu Oct 05 10:04:23 UTC 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015e-ebfe-453d-00000b0bcf90 
+on database directory /home/thanathip/platform/django-test-service/modern-django-/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@42e66837 
 Loaded from file:/srv/spark/jars/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_131-b11
